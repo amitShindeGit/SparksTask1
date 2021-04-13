@@ -34,7 +34,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <form action="/addmoney" method="post">
                 <div class="mb-3">
-                  <label for="exampleInputEmail1"  class="form-label">Enter Amount</label>
+                  <label for="exampleInputEmail1" class="form-label">Enter Amount</label>
                   <input name="addingmoney" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
 
@@ -54,7 +54,9 @@
                 <hr class="dropdown-divider">
               </li>
               <% data.forEach(function(foundData){ %>
-              <li><p class="dropdown-item" ><%= foundData.firstName + " "+ foundData.lastName %></p></li>
+              <li>
+                <p class="dropdown-item"><%= foundData.firstName + " "+ foundData.lastName %></p>
+              </li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -70,17 +72,17 @@
 
         </ul>
 
-      </ul>
-    <span class="navbar-text">
-      <% if(cuurentUser){ %>
-        Current User : <%= cuurentUser %>
-      <% }else{ %>
-        <a class="btn btn-primary" href="/login" role="button">Log In</a>
-      <% } %>
-      <!-- Current User : <%= cuurentUser %> -->
-    </span>
+        </ul>
+        <span class="navbar-text">
+          <% if(cuurentUser){ %>
+          Current User : <%= cuurentUser %>
+          <% }else{ %>
+          <a class="btn btn-primary" href="/login" role="button">Log In</a>
+          <% } %>
+          <!-- Current User : <%= cuurentUser %> -->
+        </span>
 
-    <a class="btn btn-primary" style="margin-left : 10px" href="/login" role="button">Log Out</a>
+        <a class="btn btn-primary" style="margin-left : 10px" href="/login" role="button">Log Out</a>
 
       </div>
     </div>
